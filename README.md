@@ -1,10 +1,8 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-# Chinese-Checkers中国跳棋
-
-A simple demo of Chinese checkers with AI.
+# 中国跳棋Chinese-Checkers
 
 一个简单的中国跳棋人工智能。
+
+A simple demo of Chinese checkers with AI.
 
 ## 项目结构
 
@@ -62,9 +60,9 @@ A simple demo of Chinese checkers with AI.
 
 由于搜索过程中最后一回合仅需要搜索单一最大分支，因此此部分复杂度近似正比于玩家总人数（不超过6人）。而前面搜索的复杂度将呈指数上升。
 
-不妨假设任意一步棋的走法有n种，则搜索深度为p+k时（p为游戏总人数），复杂度近似为$$ n^k \times (pn)=O(p \times n^{k+1}) $$
+不妨假设任意一步棋的走法有n种，则搜索深度为p+k时（p为游戏总人数），复杂度近似为$n^k \times (pn)=O(p \times n^{k+1})$
 
-因此可以看到，搜索深度相对人数有着更加重要的影响。因此设置1~4级分别对应(p+0)~(p+3)层搜索深度。对应的一次尝试结果如下：
+因此可以看到，搜索深度相对人数有着更加重要的影响。因此设置1-4级分别对应(p+0)-(p+3)层搜索深度。对应的一次尝试结果如下：
 
 - 测试玩家：1号玩家（搜索深度3+1），3号玩家（搜索深度3+2），5号玩家（搜索深度3+3）
 - 游戏模式：隔一子跳
